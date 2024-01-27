@@ -44,3 +44,9 @@ function topFunction() {
 }
 
 // backToTopBtn.addEventListener('click', scrollTop);
+
+const preLoad = document.getElementById('preload');
+function preloadFunction() {
+    preLoad.style.display = 'none';
+}
+setTimeout(preloadFunction, 5000);
