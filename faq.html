@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PulseCare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arimo:wght@400;700&family=Asap+Condensed:wght@300&family=Bad+Script&family=Cabin+Condensed&family=Caveat&family=DM+Sans:opsz,wght@9..40,100&family=Dancing+Script:wght@700&family=Foldit:wght@100&family=Heebo:wght@200&family=IBM+Plex+Sans:ital,wght@1,500&family=Indie+Flower&family=Josefin+Sans:wght@300;600;700&family=Kanit:wght@300&family=Lato:wght@300&family=Marck+Script&family=Montserrat:wght@100;200&family=Nunito:wght@200;300;400;600;800&family=Oleo+Script&family=Open+Sans:ital,wght@0,400;1,300&family=Oswald:wght@300;400&family=Outfit&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300&family=Rubik+Pixels&family=Sevillana&family=Tajawal&family=Titillium+Web:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arimo:wght@400;700&family=Asap+Condensed:wght@300&family=Bad+Script&family=Cabin+Condensed&family=Caveat&family=DM+Sans:opsz,wght@9..40,100&family=Dancing+Script:wght@700&family=Foldit:wght@100&family=Heebo:wght@200&family=IBM+Plex+Sans:ital,wght@1,500&family=Indie+Flower&family=Josefin+Sans:wght@300;600;700&family=Kanit:wght@300&family=Lato:wght@300&family=Marck+Script&family=Montserrat:wght@100;200&family=Nunito:wght@200;300;400;600;800&family=Oleo+Script&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@300;400&family=Outfit&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300&family=Rubik+Pixels&family=Sevillana&family=Tajawal&family=Titillium+Web:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arimo:wght@400;700&family=Asap+Condensed:wght@300&family=Bad+Script&family=Cabin+Condensed&family=Caveat&family=DM+Sans:opsz,wght@9..40,100&family=Dancing+Script:wght@700&family=Foldit:wght@100&family=Heebo:wght@200&family=IBM+Plex+Sans:ital,wght@1,500&family=Indie+Flower&family=Josefin+Sans:wght@300;600;700&family=Kanit:wght@300&family=Lato:wght@300&family=Marck+Script&family=Montserrat:wght@100;200&family=Nunito:wght@200;300;400;600;800&family=Oleo+Script&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@300;400&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300&family=Rubik+Pixels&family=Sevillana&family=Tajawal&family=Titillium+Web:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/faq.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+</head>
+
+<body>
+  <button class="scrolltop" title="Back to Top" onclick="topFunction()" id="toTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+    <!-- navbar -->
+    <div class="bg-div">
+        <nav class="navbar navbar-expand-lg fixed-top " id="top-nav">
+            <div class="container">
+              <a href="#" id="logo" class="navbar-brand"><img src="img/logom.png" class="img-fluid logo"  alt=""></a>
+                <button style="border: none; color: #c5cbe3;" data-bs-toggle="collapse" id="open-nav"
+                    class="navbar-toggler d-lg-none shadow-none " data-bs-target="#collapsibleNavId" type="button"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-custom">
+                        <i class="bi bi-list"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse " id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">HOME</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="team.html" class="nav-link">TEAM</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="About.html" class="nav-link">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link" >CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="color: #a57327;">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="nav-body">
+            <div class="container">
+                <div class="row row-column">
+                    <div class="col">
+                        <div class="content-box">
+                            <h4 class="mb-3">How can we help you?</h4>
+                            <!-- <p class="content-text mb-5">
+                                such as donating to charities and dedicating time to volunteer.
+                            </p> -->
+                            <button type="button">
+                                Start Fundraising &nbsp; &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+    <section class="mt-5 mb-5">
+        <div class="container">
+            <div class="plans-header mb-5">
+                <span style="color: #a9b5cb;">/ PulseCare Faqs /</span>
+                <h2 style="margin: 0; font-size: 30px;">Frequently Asked questions</h2>  
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="accordion" class="accordion-style">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h6 style="margin: 0;">What is PulseCare?</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                <p class="paragraph">Pulsecare is a fundraising company that offers its users and society easy charitable activity reachouts and also helps the less priviledge.</p>  
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h6 style="margin: 0;">Does it cost anything?</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                <p class="paragraph">While it's free to create and share your online fundraising campaign, Fundly will deduct a 4.9% fee from each donation that you receive. A small credit card processing fee of 2.9% + $.30 will also be deducted from each donation. We provide automatic discounts for larger campaigns!</p>  
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h6 style="margin: 0;">How to create an Account?</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                            <div class="card-body">
+                             <p class="paragraph">To create an account click the button "Start fundraising" and pass the registration form</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <h6 style="margin: 0;">What is the profitability of the program ?</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
+                            <div class="card-body">
+                              <p class="paragraph">Profitability depends on how you choose to you our services.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <h6 style="margin: 0;">Getting news coverage</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
+                            <div class="card-body">
+                              <p class="paragraph">Welcome to Fundly’s guide to pitching your campaign to the media, where we will teach you the basics of publicizing your campaign outside of your network.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingSix">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <h6 style="margin: 0;">How do i get my money?</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordion">
+                            <div class="card-body">
+                              <p class="paragraph">Once your fundraising campaign begins receiving online donations, the funds will be transferred by Stripe as soon as it is available.The process may take a day or two depending on your withdrawal schedule (which can be set to daily, weekly, or monthly), location, your bank, and your campaign status.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingSeven">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <h6 style="margin: 0;">How it works?</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-bs-parent="#accordion">
+                            <div class="card-body">
+                              <p class="paragraph"><b>#Videos & Photos Front And Center</b><br><b>#Blog-Like Updates & Commenting</b><br><b>#Manage Your Campaign From Anywhere With The Free mobile App</b></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingEight">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <h6 style="margin: 0;">How to fundraise</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-bs-parent="#accordion">
+                            <div class="card-body">
+                              <p class="paragraph"><b>Tip #1: Tell Your Story</b><br><b>Tip #2: Recruit Your Inner Circle</b><br><b>Tip #3: Share Your Campaign With Local Media Outlets</b><br><b>Tip #4: Connect the Online With the Offline</b></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingNine">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <h6 style="margin: 0;">Write a great update</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-bs-parent="#accordion">
+                            <div class="card-body">
+                              <p class="paragraph">Updates are the best way to communicate with your supporters about the progress of your campaign. You can also attract new donors by showing that you’re active in your fundraising efforts.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTen">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                <h6 style="margin: 0;">Attention</h6>
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-bs-parent="#accordion">
+                            <div class="card-body">
+                              <p class="paragraph">On no reason a user would open more than one acccount, As it would be terminated when discoverd</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+   
+
+
+    <!-- footer -->
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+<div class="company-theme">
+    <h4 class="name mb-3">
+        MedRevive
+    </h4>
+    <p class="">
+        The goal is to provide a convenient and efficient way for individuals to manage their health and interact with healthcare services online.
+    </p>
+    <div class="contact-info">
+        <div class="gmail">
+            <p><i class="fa-solid fa-envelope"></i> Info@PulseCare.com</p>
+        </div>
+        <div class="location">
+            <p><i class="fa-solid fa-location-dot"></i> 1378 Whitetall Frisco, 75034</p>
+        </div>
+        
+
+    </div>
+</div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+<div class="quick-links">
+    <h3 class="mb-3">
+        Quick Links
+    </h3>
+    <ul class="links-list">
+        <li>
+            <a href="#">Home</a>
+        </li>
+       
+        <li>
+            <a href="#">Team</a>
+        </li>
+        <li>
+            <a href="#">Donate</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        <li>
+            <a href="#">Faqs</a>
+        </li>
+
+    </ul>
+</div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="services">
+                        <h3 class="mb-3">Our Services</h3>
+                        <ul>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="appoint">
+                        <h3 class="mb-3">Book An Appointment</h3>
+                        <p>The doctorate staff members are well trained professionals.</p>
+                        <button><i class="fa-solid fa-headset"></i> Call: +234 704 047 0601</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-w">
+            <div class="right">
+                <div class="right-text">
+                    <p class="gray">
+                        All Rights Reserved @Company 2024 | Terms & Conditions | Privacy Policy
+                    </p>
+                </div>
+                <div class="media-icon">
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/index.js"></script>
+</body>
+
+</html>

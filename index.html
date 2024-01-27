@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PulseCare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arimo:wght@400;700&family=Asap+Condensed:wght@300&family=Bad+Script&family=Cabin+Condensed&family=Caveat&family=DM+Sans:opsz,wght@9..40,100&family=Dancing+Script:wght@700&family=Foldit:wght@100&family=Heebo:wght@200&family=IBM+Plex+Sans:ital,wght@1,500&family=Indie+Flower&family=Josefin+Sans:wght@300;600;700&family=Kanit:wght@300&family=Lato:wght@300&family=Marck+Script&family=Montserrat:wght@100;200&family=Nunito:wght@200;300;400;600;800&family=Oleo+Script&family=Open+Sans:ital,wght@0,400;1,300&family=Oswald:wght@300;400&family=Outfit&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300&family=Rubik+Pixels&family=Sevillana&family=Tajawal&family=Titillium+Web:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arimo:wght@400;700&family=Asap+Condensed:wght@300&family=Bad+Script&family=Cabin+Condensed&family=Caveat&family=DM+Sans:opsz,wght@9..40,100&family=Dancing+Script:wght@700&family=Foldit:wght@100&family=Heebo:wght@200&family=IBM+Plex+Sans:ital,wght@1,500&family=Indie+Flower&family=Josefin+Sans:wght@300;600;700&family=Kanit:wght@300&family=Lato:wght@300&family=Marck+Script&family=Montserrat:wght@100;200&family=Nunito:wght@200;300;400;600;800&family=Oleo+Script&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@300;400&family=Outfit&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300&family=Rubik+Pixels&family=Sevillana&family=Tajawal&family=Titillium+Web:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arimo:wght@400;700&family=Asap+Condensed:wght@300&family=Bad+Script&family=Cabin+Condensed&family=Caveat&family=DM+Sans:opsz,wght@9..40,100&family=Dancing+Script:wght@700&family=Foldit:wght@100&family=Heebo:wght@200&family=IBM+Plex+Sans:ital,wght@1,500&family=Indie+Flower&family=Josefin+Sans:wght@300;600;700&family=Kanit:wght@300&family=Lato:wght@300&family=Marck+Script&family=Montserrat:wght@100;200&family=Nunito:wght@200;300;400;600;800&family=Oleo+Script&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@300;400&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300&family=Rubik+Pixels&family=Sevillana&family=Tajawal&family=Titillium+Web:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- scroll-to-top -->
+    <button class="scrolltop" title="Back to Top" onclick="topFunction()" id="toTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- navbar -->
+    <div class="bg-div">
+        <nav class="navbar navbar-expand-lg fixed-top " id="top-nav">
+            <div class="container">
+                <a href="#" id="logo" class="navbar-brand"><img src="img/logom.png" class="img-fluid logo" alt=""></a>
+                <button style="border: none; color: #c5cbe3;" data-bs-toggle="collapse" id="open-nav"
+                    class="navbar-toggler d-lg-none shadow-none " data-bs-target="#collapsibleNavId" type="button"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-custom">
+                        <i class="bi bi-list"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse " id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="color: #a57327;">HOME</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="team.html" class="nav-link">TEAM</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="About.html" class="nav-link">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="faq.html" class="nav-link">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="nav-body">
+            <div class="container">
+                <div class="row row-column">
+                    <div class="col">
+                        <div class="content-box">
+                            <h4 class="mb-3">Offer assistance to <br> those in need.</h4>
+                            <p class="content-text mb-5">
+                                such as donating to charities and dedicating time to volunteer.
+                            </p>
+                            <button type="button">
+                                Start Donating &nbsp; &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="py-5">
+        <div class="container ">
+            <div class="aboutus-con">
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="about-box">
+                            <div class="about-body">
+                                <div class="about-header ">
+                                    <h3>About Company</h3>
+                                    <h5 class="text-muted">Your trusted healthcare partner</h5>
+                                </div>
+                                <div class="about-body">
+                                    <p class="text-muted py-4">
+                                        We at Me Cure strive to provide innovative healthcare solutions to our clients.
+                                        We convert the promise of modern day technology and expert care into the
+                                        services that have
+                                        the power to restore health and save lives.
+                                    </p>
+                                    <div class="btn py-2">
+                                        <div class="d-flex m-0">
+                                            <div class="more-btn">
+                                                <button>Learn more &nbsp; <i
+                                                        class="fa-solid fa-arrow-right"></i></button>
+                                            </div>
+                                            <div class="wv">
+                                                <button>Watch video &nbsp; <i class="fa-solid fa-video"></i> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 img-con align-self-center justify-content-center">
+                        <img src="img/company.jpg" class="img-fluid " alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <hr class="hr-line">
+
+    <!-- stat -->
+    <section class="py-5 stat">
+        <div class="container">
+            <div class="text-center stat-top">
+                <h4>
+                    Statistic
+                </h4>
+            </div>
+            <div id="num" class="row text-center num  py-5">
+                <div class="col-lg-4 mb-lg-0 mb-4">
+                    <h4 class="counter" id="num1">3000</h4>
+                    <p>Supported</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="counter">35</h4>
+                    <p>Surgeries</p>
+                </div>
+                <div class="col-lg-4 ">
+                    <h4 class="counter">15000</h4>
+                    <p>Patience treated</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+    <section class="py-5">
+
+        <div class="container ">
+            <div class="row py-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/queen.png" class="img-fluid " alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="tribute">
+                        <h4>Her majesty the queen</h4>
+                        <p class="text-muted">We're deeply saddened to hear of the passing of Her Majesty The Queen who
+                            was a much loved
+                            and respected figure. Her patronages and charities cover a wide range of causes, from
+                            opportunities for young people, to the preservation of wildlife and the environment.</p>
+                        <button>Find out more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="hr-line">
+    <!-- do sth great -->
+    <section class="py-5">
+        <div class="container ">
+            <div class="tsg-top text-center mb-5">
+                <h4>Do Something Incredible today</h4>
+            </div>
+            <div class="tgs-con">
+                <div class="row ">
+                    <div class="col-lg-4 border1 mb-3 mb-lg-0">
+                        <div class="pack">
+                            <div class="pack-header bg-1">
+
+                            </div>
+                            <div class="pack-body">
+                                <h5 class="mt-4">Donate for charity</h5>
+                                <p class="text-muted ">Support a cause that matters to you by making a positive impact
+                                    through charitable giving</p>
+                                <a href="#" class="d-flex  justify-content-between ">
+                                    <p>Start Fundraising</p> <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4  mb-3 mb-lg-0">
+                        <div class="pack">
+                            <div class="pack-header bg-2">
+
+                            </div>
+                            <div class="pack-body">
+                                <h5 class="mt-4">Raise money for charity</h5>
+                                <p class="text-muted ">Support a cause that matters to you by making a positive impact
+                                    through charitable giving</p>
+                                <a href="#" class="d-flex  justify-content-between ">
+                                    <p>Start Fundraising</p> <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4  mb-3 mb-lg-0">
+                        <div class="pack">
+
+                            <div class="pack-header bg-3">
+
+                            </div>
+                            <div class="pack-body">
+                                <h5 class="mt-4">Volunteer for charity</h5>
+                                <p class="text-muted ">Support a cause that matters to you by making a positive impact
+                                    through charitable giving</p>
+                                <a href="#" class="d-flex  justify-content-between ">
+                                    <p>Start Fundraising</p> <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="req py-5">
+        <div class="container">
+            <div class="req-top mb-5 text-center ">
+                <h4>
+                    Global Helps
+                </h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <a href="#">
+                                <i class=" fa fa-paw globe"></i>
+                                Animal and pets
+                            </a>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <a href="#">
+                                <i class="fab fa-superpowers globe"></i>
+                                Arts and culture
+                            </a>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <a href="#">
+                                <i class="fa fa-graduation-cap globe"></i>
+                                Education
+                            </a>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <a href="#">
+                                <i class="fa fa-plane globe"></i> International aid
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <a href="#">
+                                <i class="fa fa-home globe"></i>
+                                Local Community
+                            </a>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <a href="#"> <i class="fas fa-life-ring globe"></i>
+                                Sports</a>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <a href="#">
+                                <i class="fa fa-heartbeat globe"></i>
+                                Health and medical
+                            </a>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <a href="#">
+                                <i class="fa fa-wheelchair globe"></i>
+                                Disability
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- project -->
+
+    <section class="py-5 fet">
+        <div class="container ">
+            <div class="fet-top text-center mb-4">
+                <h4>Projects Featured</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="row-card">
+                        <div class="row-card-header c1">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                Children with cancer evacuated from Gaza for treatment to Egypt and Jordan
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>Treaty</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+                                <a class="text-decoration-none " href="#">
+                                    <button>Learn more</button>
+                                </a>
+                                <p class="text-danger poor">15%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="row-card">
+                        <div class="row-card-header c2">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                How self-care interventions are having impact in Timor-Leste
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>caring</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+
+
+
+
+                                <a class="text-decoration-none " href="#">
+                                    <button>Learn more</button>
+                                </a>
+                                <p class="text-success ">95%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="row-card">
+                        <div class="row-card-header c3">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                Food , water and medicines for shelter in the Dnieper
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>shelter</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+
+
+
+                                <a class="text-decoration-none " href="#">
+                                    <button>Learn more</button>
+                                </a>
+                                <p class="text-danger poor">25%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="row-card">
+                        <div class="row-card-header c4">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                Distribution of provisions for the orphanages and the needy
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>Needs</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+
+
+                                <a class="text-decoration-none " href="#">
+                                    <button>Learn more</button>
+                                </a>
+                                <p class="text-success ">90%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-lg-0">
+
+                    <div class="row-card">
+                        <div class="row-card-header  c5">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                Lack of medical facilities for proper operations.
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>Medical</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+                                <a class="text-decoration-none " href="#">
+
+                                    <button>Learn more</button>
+                                </a>
+                                <p class="text-success">80%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-lg-0">
+                    <div class="row-card">
+                        <div class="row-card-header  c6">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                End the Suffering of palestian people
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>poverty</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+                                <a class="text-decoration-none " href="#">
+                                    <button>Learn more</button>
+                                </a>
+                                <p class="text-success ">75%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="row-card">
+                        <div class="row-card-header c7">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                Governments reaffirm cervical cancer elimination as a priority
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>cancer</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+                                <a class="text-decoration-none " href="#">
+                                    <button>Learn more</button>
+                                </a>
+
+                                <p class="text-success ">60%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="row-card">
+                        <div class="row-card-header c8">
+
+                        </div>
+                        <div class="row-card-body">
+                            <h4>
+                                Medication of people hit in the Ukarainian-russain War
+                            </h4>
+                            <div class="flex-top d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+                                <p>immigrant</p>
+                            </div>
+                            <div class="mt-2 btn-but flex-top d-flex align-items-center justify-content-between ">
+                                <a class="text-decoration-none " href="#">
+                                    <button>Learn more</button>
+                                </a>
+                                <p class="poor text-danger">30%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- roles -->
+    <!-- journey -->
+
+    <section class="py-5 journey">
+        <div class="container jou-con  ">
+            <div class="row">
+                <div class="col ">
+                    <div class="story-con text-center ">
+                        <h4 class="mt-5">
+                            Your story starts here
+                        </h4>
+                        <p class="py-2">Find a cause you believe in and make good things happen</p>
+                        <button class="mt-3 mb-5">Start fundraising &nbsp; <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="py-5 role-con">
+
+        <div class="container ">
+            <div class="row">
+                <div class="role-head col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center  ">
+                    <h4 class="">
+                        PulseCare
+                    </h4>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="row   act-btn text-center ">
+                        <div class="col-lg-6  mb-4">
+                            <div class="btn-con">
+                                <button class="bb">
+                                    Charity
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6  mb-4">
+                            <div class="btn-con">
+                                <button class="bb">Donation</button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div class="btn-con">
+                                <button class="lb">Support</button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div class="btn-con">
+                                <button class="lb"> Volunteer</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="project py-5">
+        <div class="container">
+            <div class="new-pro mb-5">
+                <h4>New Projects</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                    <div class="card-box box1">
+                        <div class="card-header">
+
+                        </div>
+                        <div class="card-body">
+                            <h4 class="mt-2">Health and food for our rescue puppy and hostel</h4>
+                            <div class="f1 d-flex align-items-center justify-content-between">
+                                <i class="fa-solid fa-flag"></i>
+
+                                <p class="text-muted">Animals</p>
+                            </div>
+                            <div class="f2 d-flex align-items-center justify-content-between">
+                                <h5 class="cost">$54</h5>
+                                <p class="text-muted">4%</p>
+                            </div>
+                            <meter class="w-100" id="value1" min="0" max="100" low="30" high="75" optimum="80"
+                                value="4"></meter>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                    <div class="card-box box-2">
+                        <div class="card-header">
+
+                        </div>
+                        <div class="card-body">
+                            <h4 class="mt-2">Rendering financial assistance...</h4>
+                            <div class="f1 d-flex align-items-center justify-content-between">
+                                <i class="fa-solid fa-flag"></i>
+
+                                <p class="text-muted">Animals</p>
+                            </div>
+                            <div class="f2 d-flex align-items-center justify-content-between">
+                                <h5 class="cost">$54</h5>
+                                <p class="text-muted">4%</p>
+                            </div>
+                            <meter id="value1" min="0" max="100" low="30" high="75" optimum="80" value="4"></meter>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="card-box box-3">
+                        <div class="card-header">
+
+                        </div>
+                        <div class="card-body">
+                            <h4 class="mt-2">Help our dad pay his medical bill in pakistan</h4>
+                            <div class="f1 d-flex align-items-center justify-content-between">
+                                <i class="fa-solid fa-flag"></i>
+
+                                <p class="text-muted">Animals</p>
+                            </div>
+                            <div class="f2 d-flex align-items-center justify-content-between">
+                                <h5 class="cost">$54</h5>
+                                <p class="text-muted">35%</p>
+                            </div>
+                            <meter class="w-100" id="value1" min="0" max="100" low="30" high="75" optimum="80"
+                                value="35"></meter>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="card-box box-4">
+                        <div class="card-header">
+
+                        </div>
+                        <div class="card-body">
+                            <h4 class="mt-2">Help us raise funds for BREAST CANCER in palawan</h4>
+                            <div class="f1 d-flex align-items-center justify-content-between ">
+                                <i class="fa-solid fa-flag"></i>
+
+                                <p class="text-muted">Animals</p>
+                            </div>
+                            <div class="f2 d-flex align-items-center justify-content-between">
+                                <h5 class="cost">$54</h5>
+                                <p class="text-muted">25%</p>
+                            </div>
+                            <meter class="w-100" id="value1" min="0" max="100" low="30" high="75" optimum="80"
+                                value="25"></meter>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-end mt-2">
+                <h3 class="h6">
+                    see more <i class="fa-solid fa-arrow-right"></i>
+                </h3>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="success">
+        <div class="container">
+            <h4 class="suc-top mb-3">
+                Success story
+            </h4>
+            <div class="row  ">
+                <div class="col-lg-6 mb-3 mb-lg-0  suc-img">
+                    <img src="img/cli.jpg" class="img-fluid " alt="">
+                </div>
+                <div class="col-lg-6  align-self-center justify-content-center">
+                    <h4 class="id">Susan</h4>
+                    <p class="text-muted">
+                        "I was dreaming to study in Japan for my goal to be fluent in Japanese and be able to work
+                        there. When Globalcare was released I applied. Study in Japan is too expensive to cover by
+                        oneself and even though my amount is not achieved, I got a lot of support from my friends! I
+                        want to say thank you to all the people who supported me and thank you, Globalcare!,"
+                    </p>
+                    <p class="text-muted m-top">
+                        Vini raised $1,235 to realize her dream to study in Japan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscribe -->
+    <section class=" py-5 mt-5 sub">
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="sub-box">
+                        <p>Subscribe Newsletter</p>
+                        <h4>Get the latest updates by Subscribing <br> to our newsletter</h4>
+                    </div>
+
+                </div>
+                <div class="col-lg-6  align-self-center justify-content-center">
+                    <div class="input-box">
+                        <form class="input-con d-flex align-items-center w-100">
+                            <input required type="email" placeholder="Your email address" class="email">
+                            <button type="submit" class="sub-btn">Subscribe</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="company-theme">
+                        <h4 class="name mb-3">
+                            MedRevive
+                        </h4>
+                        <p class="">
+                            The goal is to provide a convenient and efficient way for individuals to manage their health
+                            and interact with healthcare services online.
+                        </p>
+                        <div class="contact-info">
+                            <div class="gmail">
+                                <p><i class="fa-solid fa-envelope"></i> Info@PulseCare.com</p>
+                            </div>
+                            <div class="location">
+                                <p><i class="fa-solid fa-location-dot"></i> 1378 Whitetall Frisco, 75034</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="quick-links">
+                        <h3 class="mb-3">
+                            Quick Links
+                        </h3>
+                        <ul class="links-list">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Team</a>
+                            </li>
+                            <li>
+                                <a href="#">Donate</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Faqs</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="services">
+                        <h3 class="mb-3">Our Services</h3>
+                        <ul>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="appoint">
+                        <h3 class="mb-3">Book An Appointment</h3>
+                        <p>The doctorate staff members are well trained professionals.</p>
+                        <button><i class="fa-solid fa-headset"></i> Call: +234 704 047 0601</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-w">
+            <div class="right">
+                <div class="right-text">
+                    <p class="gray">
+                        All Rights Reserved @Company 2024 | Terms & Conditions | Privacy Policy
+                    </p>
+                </div>
+                <div class="media-icon">
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/index.js"></script>
+</body>
+
+</html>

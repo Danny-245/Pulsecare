@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --pri-color: #6fbedf;
+    --sec-color: #8bc34a;
+    --text-color: #4a4d57;
+    --rare: #e98074;
+    --font-size: 14px;
+    --poppins: 'Poppins', sans-serif;
+    --white: #fff;
+    --black: #000;
+    --main: #093f8b;
+    --grey: #fafafa;
+    --link: rgb(13, 110, 253);
+    --test: #024ebe;
+    --fotter: #1f2245;
+}
+
+
+.navbar .logo {
+    width: 190px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand {
+    /* color: #157b89; */
+    color: var(--white);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+}
+
+nav.apply #logo {
+    content: url(../img/logob.png);
+    width: 190px;
+}
+
+nav.apply .navbar-brand {
+    color: var(--link);
+    font-weight: 800;
+    transition: .4s;
+}
+
+.navbar-brand:hover {
+    color: #093f8b;
+}
+
+nav {
+    transition: .5s;
+}
+
+nav.apply {
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.navbar .navbar-brand span {
+    margin: 0;
+    margin-left: -15px;
+}
+
+.navbar-toggler-custom {
+    display: inline-block;
+    font-size: 28px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    border: none;
+}
+
+.bi-list {
+    color: var(--white);
+}
+
+nav.apply .bi-list {
+    color: var(--black);
+}
+
+
+.nav-item .nav-link {
+    position: relative;
+    font-size: var(--font-size);
+    font-family: var(--poppins);
+
+    /* color: var(--text-color); */
+    color: var(--white);
+}
+
+nav.apply .nav-link {
+    color: var(--text-color);
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 6px;
+    height: 1px;
+    width: 0;
+    border-radius: 5px;
+    background-color: var(--link);
+    transition: .4s all;
+}
+
+.nav-link:hover.nav-link::before {
+    width: 20px;
+}
+
+
+.nav-item a:hover {
+    color: #6fbedf;
+}
+
+header {
+    height: 50vh;
+
+}
+
+.bg-div {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/about-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+@media (max-width: 995px) {
+
+    .nav-item {
+        background-color: var(--white);
+        padding: 5px 10px;
+    }
+
+    .nav-item .nav-link {
+        color: var(--text-color);
+    }
+}
+
+/* nav-body */
+.content-box {
+    margin-top: 320px;
+}
+
+.content-box h4 {
+    font-size: 29px;
+    color: var(--white);
+}
+
+.content-box p {
+    font-size: 20px;
+    color: var(--white);
+    font-family: var(--poppins);
+}
+
+.content-box button {
+    text-transform: uppercase;
+    padding: 15px 35px;
+    border: none;
+    background-color: var(--main);
+    border-radius: 5px;
+    color: #fff;
+    transition: .4s;
+}
+
+.content-box button:hover {
+    background-color: #16417e;
+    ;
+}
+
+@media (max-width: 650px) {
+    .content-box h4 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .content-box {
+        width: 50%;
+    }
+}
+
+
+
+/* team */
+
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+.top-header {
+    color: var(--link);
+    font-size: 16px;
+}
+
+.team .team-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.team .team-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .team-img img {
+    width: 100%;
+    transform: scale(1.1);
+    margin-bottom: -15px;
+    transition: .3s;
+}
+
+.team .team-item:hover img {
+    margin: -15px 0 0 0;
+}
+
+.team .team-text {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 96px;
+    bottom: 0;
+    left: 20px;
+    padding: 22px 0;
+    text-align: center;
+    background: #ffffff;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.team .team-text h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.team .team-text p {
+    margin-bottom: 20px;
+}
+
+.team .team-social {
+    position: relative;
+    font-size: 0;
+}
+
+.team .team-social a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 0 3px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #4a4c70;
+    border: 2px solid #FDBE33;
+    transition: .3s;
+}
+
+.team .team-social a:hover {
+    color: #20212B;
+    background: #FDBE33;
+}
+
+.team .team-item:hover .team-text {
+    height: 160px;
+}
+
+
+
+
+/* footer */
+footer {
+    font-family: var(--poppins);
+    color: #fff;
+    background-color: var(--fotter);
+}
+
+footer .company-theme h4 {
+    font-size: 25px;
+}
+
+footer .company-theme p {
+    font-size: 14px;
+    font-family: 'Outfit', sans-serif;
+}
+
+footer .company-theme .contact-info i {
+    color: #2788f7;
+    font-size: 10px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+footer h3 {
+    font-size: 20px;
+    position: relative;
+}
+
+footer h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 5px;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    line-height: 27px;
+}
+
+footer ul li {
+    cursor: pointer;
+    list-style: none;
+    transition: .4s;
+}
+
+footer ul li:hover {
+    margin-left: 3px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* color: #000; */
+}
+
+.appoint button {
+    color: #fff;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 4px;
+
+}
+
+.appoint button i {
+    color: #fff;
+}
+
+.hr-w {
+    color: #fff;
+}
+
+.right-text .gray {
+    color: #d1d1d1;
+    font-size: 14px;
+}
+.scrolltop {
+    z-index: 2;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border: none;
+    background-color: #1667d9;
+    border-radius: 3px;
+}
+.scrolltop .fa-arrow-up {
+    color: #fff;
+    font-size: 16px;
+}
