@@ -706,6 +706,7 @@ border-bottom-left-radius: 5px; */
     padding: 12px;
     background-color: var(--fotter);
     width: 30%;
+    font-size: 14px;
     outline: none;
     border: none;
     color: #fff;
