@@ -48,12 +48,12 @@
 </head>
 
 <body>
-    
+
     <div id="startup">
         <svg class="spinner-container" width="65px" height="65px" viewBox="0 0 52 52">
-          <circle class="path" cx="26px" cy="26px" r="20px" fill="none" stroke-width="4px" />
+            <circle class="path" cx="26px" cy="26px" r="20px" fill="none" stroke-width="4px" />
         </svg>
-      </div>
+    </div>
     <button class="scrolltop" title="Back to Top" onclick="topFunction()" id="toTop">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -110,7 +110,7 @@
                                     Start Fundraising &nbsp; &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i>
                                 </button>
                             </a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -175,28 +175,28 @@
 
         </div>
     </section>
-<!-- small size show -->
+    <!-- small size show -->
 
-<section class="pt-4 d-lg-none d-block ">
-    <div class="container p-4">
-        <div class="row sdw-box">
-            <div class="col-6">
-<img src="img/save-the-world.jpg" class="img-fluid sdw" alt="">
-            </div>
-            <div class="col-6">
-                <div class="donate-cre">
-                    <p class="text-muted">you're supporting</p>
-                    <h4 class="sw">Save the World</h4>
-                    <p class="credit">Credit to <span class="comp">Pulsecare Inc</span></p>
+    <section class="pt-4 d-lg-none d-block ">
+        <div class="container p-4">
+            <div class="row sdw-box">
+                <div class="col-6">
+                    <img src="img/save-the-world.jpg" class="img-fluid sdw" alt="">
+                </div>
+                <div class="col-6">
+                    <div class="donate-cre">
+                        <p class="text-muted">you're supporting</p>
+                        <h4 class="sw">Save the World</h4>
+                        <p class="credit">Credit to <span class="comp">Pulsecare Inc</span></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <hr class="hor">
 
     <!-- donation-box -->
-    <section class="py-4 don-con">
+    <section class="mt-4  don-con">
         <div class="container">
             <div class="donation-box p-3">
                 <div class="row d-flex align-items-center justify-content-center">
@@ -204,29 +204,35 @@
                         <div class="header-donate mb-3">
                             <h4 class="text-center under-style">Donation Form</h4>
                         </div>
+                        <div class="payment-method text-center py-3">
+                            <button class="credit-card-payment pay-active" onclick="payActive()"
+                                id="credit-pay">Credit/debit card</button>
+                            <button class="usdt-method " id="usdt" onclick="Payusdt()">USDT</button>
+                        </div>
+
                         <div class="errors row">
                             <div class="error-msg year-error col-12" id="DateError"></div>
-                        <div class="error-msg year-error col-12 mt-2" id="cvvError"></div>
+                            <div class="error-msg year-error col-12 mt-2" id="cvvError"></div>
                         </div>
-                        
 
 
-                        <div class="form-box wset">
+
+                        <div class="form-box wset creditbox" id="creditCard">
 
 
                             <form class="row" id="form">
                                 <div class="col-12 mb-3">
                                     <div class="full-name">
                                         <label class="form-label" for="fname">Name on card</label>
-                                        <input  class="form-control shadow-none " placeholder="Kriston Watson" required
-                                            type="text" id="fname">
+                                        <input class="form-control shadow-none" autocomplete="off"
+                                            placeholder="Kriston Watson" required type="text" id="fname">
                                     </div>
                                 </div>
                                 <div class="col-12 mb-3">
                                     <div class="email">
                                         <label class="form-label " for="email">Email</label>
-                                        <input  class="form-control shadow-none" placeholder="yourName@gmail.com" required
-                                            type="email" id="email">
+                                        <input class="form-control shadow-none" autocomplete="off"
+                                            placeholder="yourName@gmail.com" required type="email" id="email">
                                     </div>
                                 </div>
 
@@ -236,15 +242,17 @@
                                             <h4 class="">Credit Card</h4>
                                         </div>
                                         <div class="icons">
+                                            <img src="img/mastercard.png" alt="">
                                             <img src="img/visa.png" alt="">
                                             <img src="img/paypal2.png" alt="">
+                                            <!-- <img src="img/allcard.png" class="all-card" width="60px" alt=""> -->
                                         </div>
 
                                     </div>
                                     <div class="row">
                                         <div class="col-12 mt-3">
                                             <label class="form-label" for="Card-no">Card number</label>
-                                            <input type="number"  id="Card-no" required
+                                            <input type="number" id="Card-no" autocomplete="off" required
                                                 class="form-control shadow-none" placeholder="1213 2131 3221 2133">
                                             <div class="error-msg mt-2 card-no-error" id="cardError"></div>
                                         </div>
@@ -259,16 +267,18 @@
                                                         <div class="month">
 
                                                             <label for="month" class="form-label ">Month</label>
-                                                            <input type="number" maxlength="2" placeholder="11" required
-                                                                class="form-control" id="month">
-                                                                
+                                                            <input type="number" maxlength="2" autocomplete="off"
+                                                                placeholder="11" required class="form-control"
+                                                                id="month">
+
                                                         </div>
 
                                                         <div class="year">
 
                                                             <label for="year" class="form-label">Year</label>
-                                                            <input type="number" maxlength="2" placeholder="11" required
-                                                                class="form-control" id="year">
+                                                            <input type="number" maxlength="2" autocomplete="off"
+                                                                placeholder="11" required class="form-control"
+                                                                id="year">
 
                                                         </div>
                                                     </div>
@@ -277,9 +287,10 @@
 
                                                             <label for="cvv" class="form-label">CVV</label>
                                                             <div class="input-box d-flex align-items-center ">
-                                                                <input type="number" placeholder="_ _ _" maxlength="3" required
-                                                                    class="shadow-none  form-control" id="cvv"> <i
-                                                                    class="fa-solid fa-credit-card"></i>
+                                                                <input type="number" autocomplete="off"
+                                                                    placeholder="_ _ _" maxlength="3" required
+                                                                    class="shadow-none  form-control" id="cvv">
+                                                                <i class="fa-solid fa-credit-card"></i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -293,28 +304,173 @@
                                             <label for="donation-amount" class="form-label ">Donation amount</label>
                                             <div class="flex-amount d-flex align-items-center">
                                                 <span class="dollar-sign">$</span>
-                                                <input type="number"  id="donation-amount" oninput="addStyle(this)" required
-                                                    placeholder="250" class="form-control shadow-none ">
+                                                <input type="number" autocomplete="off" id="donation-amount"
+                                                    oninput="addStyle(this)" required placeholder="Amount"
+                                                    class="form-control shadow-none ">
 
                                             </div>
                                         </div>
 
                                     </div>
+                                    <div class="auto-amount text-center py-3">
+                                        <!-- <div class="row ">
+                                            <div class="col-3">
+                                                <div class="fp active "><p>$100</p></div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="fp"> <p>$50</p></div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="fp"><p>$75</p></div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="fp"><p>custom</p></div>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="buttons  d-flex justify-content-center ">
+                                            <button type="button" class="fp twoh" id="$200"
+                                                onclick="addtwoHundredDos()">$200</button>
+                                            <button type="button" class="fp oh" id="$100"
+                                                onclick="addoneHundredDos()">$100</button>
+                                            <button type="button" class="fp sf" id="$75"
+                                                onclick="addsevenfiveDos()">$75</button>
+                                            <button type="button" class="fp ft" id="$50"
+                                                onclick="addfiftyDos()">$50</button>
+                                            <button type="button" class="fp onchange custom" id="custom"
+                                                onclick="addcustomDos()">custom</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-12 mt-4 submit">
-                                    <button type="submit" class="w-100 submit-btn" onclick="validateForm()">Submit</button>
+                                    <button type="submit" class="w-100 submit-btn text-center" id="go-next"
+                                    >Continue <span id="loader-span"></span></button>
                                 </div>
                             </form>
 
 
 
                         </div>
+                        <div class="usdt show-form" id="usdtForm">
+                            <form class="row" id="form2">
+                                <div class="col-lg-6 mb-lg-0 mb-3">
+                                    <div class="full-name">
+                                        <label for="full-name" class="form-label">YOUR FULL NAME</label>
+                                        <input type="text" required id="full-name" class="form-control shadow-none ">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-lg-0 mb-3">
+                                    <div class="wallet-address">
+                                        <label for="wall-add" class="form-label">USDT WALLET ADDRESS:</label>
+                                        <div class="wall-copy">
+                                            <input type="text" class="form-control shadow-none copy-add" value="bc1q4qfasm796u9ydyhhpfxkfqz0537nykvw23s6pk" readonly
+                                                id="wall-add">
+                                            <button type="button" onclick="copyWalladd(), showCopiedalert()" class="copy-btn">Copy</button>
+                                        </div>
+                                        <p class="text-muted copy-text">copy the wallet address above</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="choose-file">
+                                        <label for="file"  class="form-label ">Please upload payment
+                                            slip</label>
+                                        <input type="file" required class="form-control shadow-none" id="file">
+
+                                    </div>
+                                </div>
+                                <div class="donation-amount mt-3 ">
+                                    <div class="don-amount">
+                                        <label for="donation-amount" class="form-label ">Donation amount</label>
+                                        <div class="flex-amount d-flex align-items-center">
+                                            <span class="dollar-sign">$</span>
+                                            <input type="number" autocomplete="off" id="sdonation-amount"
+                                                oninput="addStyle(this)" required placeholder="Amount"
+                                                class="form-control shadow-none ">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="auto-amount text-center py-3">
+                                    <!-- <div class="row ">
+                                        <div class="col-3">
+                                            <div class="fp active "><p>$100</p></div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="fp"> <p>$50</p></div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="fp"><p>$75</p></div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="fp"><p>custom</p></div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="buttons  d-flex justify-content-center ">
+                                        <button type="button" class="fp stwoh" id="s$200"
+                                            onclick="saddtwoHundredDos()">$200</button>
+                                        <button type="button" class="fp soh" id="s$100"
+                                            onclick="saddoneHundredDos()">$100</button>
+                                        <button type="button" class="fp ssf" id="s$75"
+                                            onclick="saddsevenfiveDos()">$75</button>
+                                        <button type="button" class="fp sft" id="s$50"
+                                            onclick="saddfiftyDos()">$50</button>
+                                        <button type="button" class="fp s-onchange scustom" id="scustom"
+                                            onclick="saddcustomDos()">custom</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-4 submit">
+                                    <button type="submit" class="w-100 submit-btn text-center" id="go-tx"
+                                        onclick="">Continue <span id="loader-span"></span></button>
+                                </div>
+                                <div class="copied-alert shadow-sm" id="cpa" >
+                                    <p>Wallet address copied</p>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
             <p id="txxt"></p>
         </div>
+
+        <div class="ssl-con text-center py-3">
+            <i class="bi bi-shield-check"></i> <span class="ssl text-muted "> SECURE SSL CHECKOUT</span>
+        </div>
+
+
+        <div class="security-alert py-2 d-lg-none " id="alert">
+            <div class="container ">
+                <div class="col-lg-6 ">
+                    <div class="alert-box">
+                        <div class="flex-alert-box">
+                            <h4>Security Alert</h4>
+                            <p class="rm" id="rm-alert" onclick="removeAlert()">&times;</p>
+                        </div>
+                        <p>We want to assure you that all data and information on our site are encrypted, ensuring the
+                            utmost
+                            security. Your privacy is our top priority, and we employ the latest encryption protocols to
+                            protect
+                            your sensitive information from unauthorized access.
+                            <span class="trust">Feel confident to donate. Thank you for
+                                your
+                                trust.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
     </section>
+
+
+
+
+
 
 
 
@@ -326,7 +482,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <div class="company-theme">
                         <h4 class="name mb-3">
-                          Pulsecare
+                            Pulsecare
                         </h4>
                         <p class="">
                             The goal is to provide a convenient and efficient way for individuals to manage their health
@@ -407,6 +563,7 @@
     </footer>
 
     <script src="JS/donate.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
