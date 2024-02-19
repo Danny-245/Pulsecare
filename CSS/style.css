@@ -185,6 +185,11 @@ background-repeat: no-repeat;
     font-size: 40px;
 font-family: 'Poppins', sans-serif;
 }
+@media (max-width: 450px) {
+    .about-box .about-body .about-header h3 {
+        font-size: 31px;
+    }
+}
 .about-body p {
     line-height: 27px;
     font-family: 'Poppins', sans-serif;
