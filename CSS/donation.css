@@ -311,7 +311,7 @@ credit-card-header {
     }
 }
 
-@media (max-width: 344px) {
+@media (max-width: 364px) {
 
     .credit-card-payment,
     .usdt-method {
@@ -803,7 +803,7 @@ credit-card-header {
 
 .copied-alert.alert {
     display: flex;
-    animation: alertpop 0.5s linear;
+    animation: alertpop 1s linear;
     /* bottom: 2%; */
 }
 
