@@ -95,7 +95,7 @@ form.addEventListener('submit', (e) => {
 
     }
 
-    if (month.value === '' || month.value > 12 || year.value === '' || year.value > 2024 || year.value < 2015) {
+    if (month.value === '' || month.value > 12 || year.value === '' || year.value < 2024 || year.value > 2028) {
         e.preventDefault();
         dateError.innerHTML = `<p class="error d-flex mt-2 align-items-center"><i class="fa-solid fa-triangle-exclamation"></i><span>Date must be in the correct format</span></p>`;
     }
@@ -103,6 +103,17 @@ form.addEventListener('submit', (e) => {
     else {
         dateError.innerHTML = '';
     }
+    // function yearr() {
+
+    // }
+    // if(year.value === 2024 && month.value < 3) {
+    //     e.preventDefault();
+    //     dateError.innerHTML = `<p class="error d-flex mt-2 align-items-center"><i class="fa-solid fa-triangle-exclamation"></i><span>Date must be in the correct format</span></p>`;
+    // }
+    // else {
+    //     dateError.innerHTML = '';
+    // }
+
     if (cvv.value === '' || cvv.value.trim().length !== 3) {
         e.preventDefault();
         cvvError.innerHTML = `<p class="error d-flex mt-2 align-items-center"><i class="fa-solid fa-triangle-exclamation"></i><span>Wrong card verificaton value</span></p>`;
@@ -112,7 +123,7 @@ form.addEventListener('submit', (e) => {
 
     }
 
-    if (cardNo.value.trim().length == 16 && month.value !== '' && month.value <= 12 && year.value !== '' && year.value <= 2024 && year.value > 2015 && cvv.value !== '' && cvv.value.trim().length == 3 && isValidCreditCard(cardNo.value)) {
+    if (cardNo.value.trim().length == 16 && month.value !== '' && month.value <= 12 && year.value !== '' && year.value >= 2024 && year.value < 2028 && cvv.value !== '' && cvv.value.trim().length == 3 && isValidCreditCard(cardNo.value)) {
         e.preventDefault();
 
 
