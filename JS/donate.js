@@ -153,7 +153,7 @@ form.addEventListener('submit', (e) => {
                 icon: "success",
                 button: "Ok",
             }).then(() => {
-                location.reload();
+                location.href = "index.html";
             });
         }, 10000)
     }
@@ -403,7 +403,7 @@ formTwo.addEventListener('submit', (e)=> {
             icon: "success",
             button: "Ok",
         }).then(() => {
-            location.reload();
+            location.href = "index.html";
         });
     }, 10000)
     
