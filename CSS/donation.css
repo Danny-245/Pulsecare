@@ -633,6 +633,7 @@ credit-card-header {
 
 .trust {
     font-weight: 600;
+    /* color: #dba96b; */
 }
 
 .flex-alert-box {
@@ -810,7 +811,6 @@ credit-card-header {
 .copied-alert p {
     margin: 0;
 }
-
 /* footer */
 footer {
     font-family: var(--poppins);
