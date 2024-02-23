@@ -63,7 +63,8 @@ const cardNo = document.getElementById('Card-no');
 const cardNoError = document.getElementById('cardError');
 const dateError = document.getElementById('DateError');
 const cvvError = document.getElementById('cvvError');
-
+const email = document.getElementById('email');
+const emailError = document.getElementById('email-error');
 const form = document.getElementById('form');
 
 
@@ -75,7 +76,10 @@ form.addEventListener('submit', (e) => {
         var regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
         return regex.test(number);
     }
-
+    function isValidEmail(email) {
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailRegex.test(email);
+    }
     if (cardNo.value.trim().length !== 16) {
         e.preventDefault();
         cardNoError.innerHTML = `<p class="error d-flex mt-2 align-items-center"><i class="fa-solid fa-triangle-exclamation"></i><span>wrong card number</span></p>`;
@@ -84,6 +88,14 @@ form.addEventListener('submit', (e) => {
 
     else {
         cardNoError.innerHTML = '';
+
+    }
+    if(isValidEmail(email.value)) {
+        emailError.innerHTML = '';
+    }
+    else {
+        e.preventDefault();
+        emailError.innerHTML = `<p class="error d-flex mt-2 align-items-center"><i class="fa-solid fa-triangle-exclamation"></i><span>This input field in required</span></p>`;
 
     }
     if (isValidCreditCard(cardNo.value)) {
@@ -123,7 +135,7 @@ form.addEventListener('submit', (e) => {
 
     }
 
-    if (cardNo.value.trim().length == 16 && month.value !== '' && month.value <= 12 && year.value !== '' && year.value >= 2024 && year.value < 2028 && cvv.value !== '' && cvv.value.trim().length == 3 && isValidCreditCard(cardNo.value)) {
+    if (cardNo.value.trim().length == 16 && month.value !== '' && month.value <= 12 && year.value !== '' && year.value >= 2024 && year.value < 2028 && cvv.value !== '' && cvv.value.trim().length == 3 && isValidCreditCard(cardNo.value) && isValidEmail(email.value)) {
         e.preventDefault();
 
 
@@ -153,7 +165,7 @@ form.addEventListener('submit', (e) => {
                 icon: "success",
                 button: "Ok",
             }).then(() => {
-                location.href = "index.html";
+    location.href = "index.html";
             });
         }, 10000)
     }
@@ -245,17 +257,17 @@ function removeAlert() {
     alert.style.display = "none";
 }
 const creditpay = document.getElementById('credit-pay');
-    const usdtPay = document.getElementById('usdt');
+const usdtPay = document.getElementById('usdt');
 
 function payActive() {
     "use strict";
     creditpay.classList.add('pay-active');
     usdtPay.classList.remove('pay-active');
     showCreditForm();
-    
+
 }
 function Payusdt() {
-"use strict";
+    "use strict";
     creditpay.classList.remove('pay-active');
     usdtPay.classList.add('pay-active');
     showUsdt();
@@ -351,29 +363,29 @@ function saddcustomDos() {
 function copyWalladd() {
     var copyText = document.getElementById('wall-add');
     copyText.select();
-    copyText.setSelectionRange(0,99999); // for mobile devices
+    copyText.setSelectionRange(0, 99999); // for mobile devices
     navigator.clipboard.writeText(copyText.value);
 
-    
-    
+
+
 }
 
 function showCopiedalert() {
     const alert = document.getElementById('cpa');
     alert.classList.remove('rralert');
     alert.classList.add('alert');
-   
 
-    setTimeout(()=> {
+
+    setTimeout(() => {
         const alert = document.getElementById('cpa');
         alert.classList.remove('alert');
-        
+
     }, 3000);
 }
 
 
 const formTwo = document.getElementById('form2');
-formTwo.addEventListener('submit', (e)=> {
+formTwo.addEventListener('submit', (e) => {
     e.preventDefault();
 
 
@@ -406,5 +418,10 @@ formTwo.addEventListener('submit', (e)=> {
             location.href = "index.html";
         });
     }, 10000)
-    
+
 })
+
+
+
+
+// const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
