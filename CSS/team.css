@@ -64,6 +64,7 @@ nav.apply .navbar-brand {
 
 nav {
     transition: .5s;
+    font-weight: 500;
 }
 
 nav.apply {
