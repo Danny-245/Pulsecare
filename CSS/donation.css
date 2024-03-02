@@ -68,6 +68,7 @@ nav.apply .navbar-brand {
 
 nav {
     transition: .5s;
+     font-weight: 500;
 }
 
 nav.apply {
@@ -620,16 +621,79 @@ credit-card-header {
 }
 
 .security-alert {
-    color: #3c3c43;
+    /* width: fit-content; */
+    display: none;
+    z-index: 2;
+    /* color: #3c3c43; */
+    position: fixed;
+    bottom: 2px;
+    right: 5px;
+    animation: show-app 0.3s linear;
 }
+@keyframes show-app {
+    from {
+        opacity: 0;
+        display: none;
+    }
+    to {
+        opacity: 1;
+        display: block;
+    }
+}
+.security-alert.app {
+    opacity: 1;
+    display: block;
+    
+}
+.security-alert.app-r {
+    animation:opp 0.3s linear;
+}
+ @keyframes opp {
+    from {
+        opacity: 1;
+        display: block;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+ }
 
 .alert-box {
-    background-color: #d9edf7;
+    /* box-shadow: 2px 5px 5px #333; */
+    -webkit-box-shadow: 1px -1px 13px 0px rgba(0,0,0,0.45);
+-moz-box-shadow: 1px -1px 13px 0px rgba(0,0,0,0.45);
+box-shadow: 1px -1px 13px 0px rgba(0,0,0,0.45);
+    font-size: 13px;
+    /* background-color: #d9edf7; */
+    /* background-color: mintcream; */
+    background-color: #fff;
+    /* border: 1px solid #33333357; */
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px; 
     line-height: 27px;
     font-family: 'Poppins', sans-serif;
 }
+.und {
+    padding: 10px;
+    border: none;
+    background-color: #093f8b;
+    border-radius: 5px;
+    font-size: 13px;
+    /* margin-top: -40px; */
+    color: #fff;
+}
+.aa-end {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+@media (min-width: 1000px) {
+    .alert-box {
+        width: 600px;
+    }
+}
+
 
 .trust {
     font-weight: 600;
@@ -644,8 +708,17 @@ credit-card-header {
 }
 
 .rm {
+    
+    cursor: pointer;
     font-size: 25px;
     color: #333333d8;
+    transition: .2s;
+    padding: 0 5px;
+
+}
+.rm:hover {
+    /* border: 1px dotted #000; */
+    color: #6b6b6bd8;
 }
 
 /* payment-method */
