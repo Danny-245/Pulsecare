@@ -60,6 +60,7 @@ color:#093f8b;
 }
 nav {
     transition: .5s ;
+    font-weight: 500;
 }
 nav.apply {
     background-color: #fff;
@@ -126,7 +127,7 @@ header {
 }
 .bg-div {
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/bg-top.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/bg-2.jpg);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
@@ -187,7 +188,7 @@ font-family: 'Poppins', sans-serif;
 }
 @media (max-width: 450px) {
     .about-box .about-body .about-header h3 {
-        font-size: 31px;
+        font-size: 32px;
     }
 }
 .about-body p {
@@ -723,7 +724,6 @@ border-bottom-left-radius: 5px; */
         font-size: 20px;
     }
 }
-
 /* footer */
 footer {
     font-family: var(--poppins);
@@ -818,17 +818,17 @@ footer ul li a {
     position: fixed;
     height: 100vh;
     width: 100%;
-     background-color: #fff;
+    background-color: #fff;
     z-index: 999999999;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .loader .preloader {
-  width: 40px;
+  width: 60px;
  border: 4px solid #e3e3e3;
  border-right-color: #a57327;
-  height: 40px;
+  height: 60px;
   border-radius: 50%;
   animation: load 1s ease infinite;
 }
