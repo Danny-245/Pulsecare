@@ -59,6 +59,7 @@ color:#093f8b;
 }
 nav {
     transition: .5s ;
+    font-weight: 500;
 }
 nav.apply {
     background-color: #fff;
