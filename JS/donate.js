@@ -249,12 +249,17 @@ function addcustomDos() {
 }
 
 // BUTTON-SPINNER
+setTimeout(function showAlert() {
+    const alert = document.getElementById('alert');
+    alert.classList.add('app');
+}, 5000)
 
 function removeAlert() {
     "use strict";
     // const rmBtn = document.getElementById('rm-alert');
     const alert = document.getElementById('alert');
-    alert.style.display = "none";
+    alert.classList.remove('app')
+    alert.classList.add('app-r');
 }
 const creditpay = document.getElementById('credit-pay');
 const usdtPay = document.getElementById('usdt');
@@ -372,7 +377,7 @@ function copyWalladd() {
 
 function showCopiedalert() {
     const alert = document.getElementById('cpa');
-    alert.classList.remove('rralert');
+
     alert.classList.add('alert');
 
 
