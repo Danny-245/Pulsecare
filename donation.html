@@ -164,11 +164,11 @@
                                     care and creates a positive impact for their lives.
                                 </p>
 
-                              <a href="#donation">
-                                <button class="don-btn">
-                                    Start Donating &nbsp; &nbsp;<i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                              </a>  
+                                <a href="#donation">
+                                    <button class="don-btn">
+                                        Start Donating &nbsp; &nbsp;<i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
                                         <label class="form-label " for="email">Email</label>
                                         <input class="form-control shadow-none" autocomplete="off"
                                             placeholder="yourName@gmail.com" required type="email" id="email">
-                                            <div class="error-msg mt-2 email-error" id="email-error"></div>
+                                        <div class="error-msg mt-2 email-error" id="email-error"></div>
                                     </div>
                                 </div>
 
@@ -346,8 +346,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12 mt-4 submit">
-                                    <button type="submit" class="w-100 submit-btn text-center" id="go-next"
-                                    >Continue <span id="loader-span"></span></button>
+                                    <button type="submit" class="w-100 submit-btn text-center" id="go-next">Continue
+                                        <span id="loader-span"></span></button>
                                 </div>
                             </form>
 
@@ -366,16 +366,18 @@
                                     <div class="wallet-address">
                                         <label for="wall-add" class="form-label">USDT WALLET ADDRESS:</label>
                                         <div class="wall-copy">
-                                            <input type="text" class="form-control shadow-none copy-add" value="bc1q4qfasm796u9ydyhhpfxkfqz0537nykvw23s6pk" readonly
+                                            <input type="text" class="form-control shadow-none copy-add"
+                                                value="bc1q4qfasm796u9ydyhhpfxkfqz0537nykvw23s6pk" readonly
                                                 id="wall-add">
-                                            <button type="button" onclick="copyWalladd(), showCopiedalert()" title="copy" class="copy-btn"><i class="fa-solid fa-copy"></i></button>
+                                            <button type="button" onclick="copyWalladd(), showCopiedalert()"
+                                                title="copy" class="copy-btn"><i class="fa-solid fa-copy"></i></button>
                                         </div>
                                         <p class="text-muted copy-text">copy the wallet address above</p>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="choose-file">
-                                        <label for="file"  class="form-label ">Please upload payment
+                                        <label for="file" class="form-label ">Please upload payment
                                             slip</label>
                                         <input type="file" required class="form-control shadow-none" id="file">
 
@@ -428,7 +430,7 @@
                                     <button type="submit" class="w-100 submit-btn text-center" id="go-tx"
                                         onclick="">Continue <span id="loader-span"></span></button>
                                 </div>
-                                <div class="copied-alert shadow-sm" id="cpa" >
+                                <div class="copied-alert shadow-sm" id="cpa">
                                     <p>Wallet address copied</p>
                                 </div>
                             </form>
@@ -444,10 +446,10 @@
         </div>
 
 
-        <div class="security-alert py-2 d-lg-none " id="alert">
-            <div class="container ">
-                <div class="col-lg-6 ">
-                    <div class="alert-box">
+        <div class="security-alert py-2 shadow-sm" onload="showAlert()" id="alert">
+            <div class="container">
+                <div class="col-lg-12 ">
+                    <div class="alert-box ">
                         <div class="flex-alert-box">
                             <h4>Security Alert</h4>
                             <p class="rm" id="rm-alert" onclick="removeAlert()">&times;</p>
@@ -457,10 +459,14 @@
                             security. Your privacy is our top priority, and we employ the latest encryption protocols to
                             protect
                             your sensitive information from unauthorized access.
-                            <span class="trust text-success " >Feel confident to donate. Thank you for
+                            <span class="trust text-success ">Feel confident to donate. Thank you for
                                 your
                                 trust.</span>
+                            
                         </p>
+                        <div class="aa-end">
+                        <button class="und" onclick="removeAlert()">Ok, I understand</button>
+                    </div>
                     </div>
 
                 </div>
