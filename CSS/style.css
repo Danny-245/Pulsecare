@@ -389,6 +389,16 @@ font-family: 'Poppins', sans-serif;
     background-size: cover;
 
 }
+@media (min-width: 992px) {
+.show-md {
+    display: none;
+}
+}
+@media (max-width: 770px) {
+    .show-md {
+        display: none;
+    }
+    }
 .fet .row-card .row-card-header.c2 {
     height: 200px;
     background-color: var(--grey);
@@ -837,3 +847,4 @@ footer ul li a {
     transform: rotate(360deg);
 }
 }
+/* 2e9f0e78b3b67cf691f3a5308fe20151 */
