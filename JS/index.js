@@ -68,7 +68,7 @@ function subscribe() {
                 subNews.style.display = "none";
 
             }
-        }, 10000);
+        }, 16000);
     })
 
     const emailForm = document.getElementById('pop-up');
